@@ -1,0 +1,15 @@
+.students{
+    background-color: #00ffffff;
+    margin: 20 20 20 20;
+    padding : 20 20 20 20;
+    font-style: italic;
+}
+dt{
+    color: red;
+    margin-left:50px;
+}
+dd{
+    margin-left: 50px;
+    font-size: 20px;
+    
+}
