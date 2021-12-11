@@ -1,0 +1,110 @@
+<html>
+    <head>
+<script>
+  function bilal()
+  {
+   var password= document.getElementById("password");
+   var username=document.getElementById("username");
+   var button = document.getElementById("button");
+   var buttontext=button.value;
+   if(buttontext=="Hide")
+   {
+     username.style.visibility="hidden";
+     password.style.visibility="hidden";
+        button.value="Show";
+   }
+   else
+   {
+    username.style.visibility="visible";
+     password.style.visibility="visible";
+        button.value="Hide";
+   }
+   
+  }
+    window.onload=function()
+    {
+      // var username=document.getElementById("username");
+      // var password=document.getElementById("password");
+      // username.value="Mazhar";
+      // password.value="1234";
+        /******* 1. variables **********/
+          // It is a name given to a memory location in which we can store data.
+          // To declare a variable we use var keyword.
+          // In javascript we dont have to specify datatypes with the variables
+          // Javascript will automatically decide the datatype.
+          //Ex : var a=5; Here var indicates 'a' is a variable and 'a' is the name of the variable
+          // 5 is the value of a
+          // Note : a variable can store different types of data at different situations
+          // ex: a=5  a='mazhar' a=42.35
+          var a=5;
+          console.log(typeof(a))
+          var a='mazhar';
+          console.log(typeof(a))
+          var a=72.93;
+          console.log(typeof(a))
+          var a=true;
+          console.log(typeof(a))
+          /******************* 2. Operators ******************/
+          // Operator is a symbol which perform some operation
+          // Various operators in Javascript
+          // +,-,*,%,/(Arithmethic operators)
+          // <,<=,>,>=,==,!= (Relational Operators)
+          // &,&&,|,|| (logical operators)
+          // Bitwise (&,|,<<,>>)
+          // Conditional Operators (?:)
+          /*******Arithmetic Operators *******/
+          var a=116;
+          var b=116;
+          console.log(a+b);//9
+          console.log(a-b);//3
+          console.log(a*b);//18
+          console.log(a/b);//2
+          console.log(a%b);//0
+          /*********** relational Operators ***********/
+          console.log(a<b);//false
+          console.log(a<=b);//false
+          console.log(a>b);//true
+          console.log(a>=b);//true
+          console.log(a==b);//false
+          console.log(a!=b);// true
+          /*************** Logical Operators ***********/
+          var c=19;
+          if(a>=b&&a>=c)
+          {
+               console.log("a is large");
+          }
+          else
+          {
+            if(a<=b&&b>=c)
+            {
+               console.log("b is large");
+            }
+            else
+            {
+              if(c>=b&&a<=c)
+             {
+               console.log("c is large");
+             }
+            }
+        }
+        //   console.log(a>b&&a>c); // false
+        //   console.log(b>c&&b>a);//false
+        //   console.log(c>a&&c>b);
+        /**************** Bitwise Operators ***********/
+        console.log(a&b);
+        console.log(a|b);
+        console.log(a<<b);
+        console.log(a>>b);
+    }
+</script>
+    </head>
+    <body>
+      <input type="text" value="amvamnsdb"  placeholder="Enter User Name"  id="username">
+      <br>
+      <br>
+      <input type="password"   placeholder="Enter Password"  id="password">
+      <br>
+      <br>
+      <input type="button"  value="Hide"  id="button"  onclick="bilal()">
+    </body>
+</html>
