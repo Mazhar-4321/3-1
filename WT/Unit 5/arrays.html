@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Arrays Examples
+        </title>
+        <script>
+            function sample()
+            {
+                // var a=5;
+                // a=9;
+                /*************Arrays*************/
+                // Array is a special variable in which we can  store more than one value at a time.
+                // Array uses special brackets []
+                // In Arrays we can store same values or different values as well
+                var a=[1,2,2,3];
+                // Methods in Arrays;
+                // push(num) : it adds num to the end of array
+                // pop(): It removes  last element of an array
+                // length : It gives the size of an array
+                // sort() : it sorts elements of an array in ascending order.
+                //slice(start,end) : it is used to take slice from an array
+                // reverse() : It reverses the elements of an array
+                //
+
+                var temp=[];
+                temp.push(a);
+                document.getElementById("p").innerText=a;
+                a.reverse();
+                if(a==temp)
+                {
+                    document.getElementById("text").innerText="Palindrome";
+                }
+                else
+                {
+                    document.getElementById("text").innerText="Not a Palindome";
+                }
+                       
+            
+               
+                
+               
+            
+            }
+            function example()
+            {
+                       var a=[4,9,1,8,7,3];
+                       document.getElementById("p").innerText=a;
+                       a.sort();
+                       document.getElementById("text").innerText=a;
+                       
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Click" onclick="sample()">
+        <p id="p"></p>
+        <p id="text"></p>
+    </body>
+  
+</html>
