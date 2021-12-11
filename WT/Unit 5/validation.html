@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            Form Validation
+        </title>
+        <script>
+            function khadar()
+            {
+                alert("khadar")
+            }
+               function validate()
+               {
+                   var username=document.getElementById("username").value;
+                   var password=document.getElementById("password").value;
+                   var cpassword=document.getElementById("cpassword").value;
+                   if(username.length==0)
+                   {
+                       alert("Email Length Cant be zero");
+                       return;
+                   }
+                   if( ! username.endsWith("@gmail.com"))
+                   {
+                    alert("Email  Doesnt end with gmail.com");
+                       return;
+                   }
+                   if(password.length<=7)
+                   {
+                    alert("password must be of 8 characters long");
+                       return;
+                   }
+                   if(password!=cpassword)
+                   {
+                    alert("password and confirm password are not same");
+                       return;
+                   }
+                   alert("Registration Successful")
+               }
+        </script>
+        <style>
+            #username,#password,#cpassword
+            {
+                margin-bottom: 20px;
+                margin-right:100px;
+            }
+        </style>
+    </head>
+    <body>
+        <input  type="text" onmouseout="khadar()" placeholder="Enter User Name" id="username">
+        <br>
+        <input type="password" placeholder="Enter Password" id="password">
+        <br>
+        <input type="password" placeholder="Confirm  Password"  id="cpassword">
+        <br>
+        <input type="button" value="Register" onclick="validate()"  id="register">
+
+    </body>
+</html>
