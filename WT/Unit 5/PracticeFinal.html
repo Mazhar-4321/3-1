@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>
+            Examples
+        </title>
+        <style>
+            ol
+            {
+                display: none;
+            }
+            li
+            {
+                font-size: 10px;
+            }
+        </style>
+        <script>
+            var i=0;
+            function dateExample()
+            {
+                var d= new Date();//Original Date Object    yyyy-mm-dd
+                var date= d.getDate();
+                var month= d.getMonth()+1;
+                var year=d.getFullYear();
+                var day= d.getDay(); // 0
+             //alert(year+"-"+month+"-"+date);
+             //alert(d);
+             if(day==0)
+             {day="Sun"}
+             if(day==1)
+             {day="Mon"}
+             if(day==2)
+             {day="Tue"}
+             if(day==3)
+             {day="Wed"}
+             if(day==4)
+             {day="Thur"}
+             if(day==5)
+             {day="Fri"}
+             if(day==6)
+             {day="sat"}
+             alert(day);
+            }
+          function dataTypesExample()
+          {
+                var a=5;
+                var b=1.2;
+                var c=true;
+                var d="mazhar";
+                var arr=[1,2,3];
+               
+                 console.log(typeof(a));
+                 console.log(typeof(b));
+                 console.log(typeof(c));
+                 console.log(typeof(d));
+                 console.log(typeof(arr))
+
+          }
+       function ShowAnswers()
+       {
+           if(i%2==0)
+           {
+           document.getElementById("ol").style.display="block";
+           document.getElementById("b").value="Hide Answers";
+           i++;
+           }
+           else
+           {
+            document.getElementById("ol").style.display="none";
+           document.getElementById("b").value="Show Answers";
+           i++;
+           }
+       }
+       function sortingExample(){
+           var a=[1,5,0,2,9];
+           console.log(a);
+           a.sort();
+           console.log(a);
+       }
+      function functionExample(a,b)
+      {
+         console.log(a+b)
+      } 
+      function s1()
+      {
+         console.log("s1");
+      }
+      function s2()
+      {
+       console.log("s2")
+      }
+      function s3()
+      {
+         console.log("s3")
+      }
+      function primeNumber()
+      {
+          var number=parseInt(document.getElementById("num").value);
+          var factors=0;
+          for(var i=1;i<=number;i++)
+          {
+              if(number%i==0)
+              factors++;
+          }
+          if(factors==2)
+          {
+              console.log("Prime Number")
+          }
+          else
+          {
+              console.log("Composite Number");
+          }
+      }
+      </script>
+    </head>
+    <body>
+        <ol id="ol">
+           <li> Object is instance of class. We can create our own objects and also we can use predefined objects.
+        </li>
+        <li>
+            Methods are the functions of a class
+        </li>
+        <li>
+            Number: It can store both positive and negative and with and without decimal
+            Boolean: It can store true or false
+            String: It can store group of characters which is enclosed in single or double quotes.
+
+        </li>
+        <li>
+            To define a function we have to use function keyword. syntax : function functionName()
+            {
+
+            }
+            functionName can be valid name. We can also pass parameters. for more than one parameter separate by comma
+        </li>
+       <li>
+           There are three keyboard events in javascript.
+           1)onKeyup : It gets fired when we release the key
+           2)onKeydown: it gets fired when the key is down
+           3)onKeypress: it gets fired when key is pressed
+       </li>
+        </ol>
+        <input type="button" value="Date Example" onclick="dateExample()">
+        <input type="button" value="Data Type Example" onclick="dataTypesExample()">
+        <input type="button" value="Show Answers" id="b" onclick="ShowAnswers()">
+ <input type="button" value="Function Example" id="f" onclick="functionExample()">
+ <input type="button" value="Sort Example" id="f" onclick="sortingExample()">
+ <input type="text" placeholder="onKeyUp" onkeyup="s1()">
+ <input type="text" placeholder="onKeyDown" onkeydown="s2()">
+ <input type="text" placeholder="onKeyPress" onkeypress="s3()">
+ <input type="text" placeholder="Enter a Number" id="num">
+ <input type="button" value="Prime Number" onclick="primeNumber()">
+    </body>
+</html>
